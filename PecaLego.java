@@ -17,6 +17,7 @@ public class PecaLego {
         // Criando objetos (peças Lego reais)
         PecaLego pecaVermelha = new PecaLego();
         PecaLego pecaAzul = new PecaLego();
+        PecaLego pecaAmarelo = new PecaLego();
 
         // Definindo características da peça vermelha
         pecaVermelha.cor = "Vermelha";
@@ -28,12 +29,19 @@ public class PecaLego {
         pecaAzul.formato = "Quadrado";
         pecaAzul.numeroDePinos = 2;
 
+        // Definindo características da peça amarela
+        pecaAmarelo.cor = "Amarela";
+        pecaAmarelo.formato = "Redondo";
+        pecaAmarelo.numeroDePinos = 80;
+
         // Fazendo as peças realizarem ações
         pecaVermelha.mostrarDetalhes();
         pecaAzul.mostrarDetalhes();
+        pecaAmarelo.mostrarDetalhes();
 
         pecaVermelha.girar();
         pecaAzul.girar();
+        pecaAmarelo.girar();
     }
 }
 
