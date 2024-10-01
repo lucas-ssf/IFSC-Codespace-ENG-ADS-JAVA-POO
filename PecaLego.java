@@ -13,11 +13,16 @@ public class PecaLego {
         System.out.println("Peça Lego " + cor + " girou 90 graus!");
     }
 
+    // Novo método para interação entre peças
+    public void empilharSobre(PecaLego outraPeca) {
+        System.out.println("Peça Lego " + this.cor + " foi empilhada sobre a peça Lego " + outraPeca.cor + ".");
+    }
+
     public static void main(String[] args) {
         // Criando objetos (peças Lego reais)
         PecaLego pecaVermelha = new PecaLego();
         PecaLego pecaAzul = new PecaLego();
-        PecaLego pecaAmarelo = new PecaLego();
+        PecaLego pecaAmarela = new PecaLego(); // Terceira peça
 
         // Definindo características da peça vermelha
         pecaVermelha.cor = "Vermelha";
@@ -30,18 +35,21 @@ public class PecaLego {
         pecaAzul.numeroDePinos = 2;
 
         // Definindo características da peça amarela
-        pecaAmarelo.cor = "Amarela";
-        pecaAmarelo.formato = "Redondo";
-        pecaAmarelo.numeroDePinos = 80;
+        pecaAmarela.cor = "Amarela";
+        pecaAmarela.formato = "Circular";
+        pecaAmarela.numeroDePinos = 6;
 
-        // Fazendo as peças realizarem ações
+        // Fazendo as peças realizarem ações individuais
         pecaVermelha.mostrarDetalhes();
         pecaAzul.mostrarDetalhes();
-        pecaAmarelo.mostrarDetalhes();
+        pecaAmarela.mostrarDetalhes();
 
         pecaVermelha.girar();
         pecaAzul.girar();
-        pecaAmarelo.girar();
+        pecaAmarela.girar();
+
+        // Fazendo as peças interagirem
+        pecaVermelha.empilharSobre(pecaAzul);   // Vermelha sobre Azul
+        pecaAmarela.empilharSobre(pecaVermelha); // Amarela sobre Vermelha
     }
 }
-
