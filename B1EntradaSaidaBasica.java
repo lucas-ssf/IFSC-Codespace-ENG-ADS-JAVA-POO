@@ -10,6 +10,7 @@ public class B1EntradaSaidaBasica {
         System.out.println("Valor em decimal: " + numero);
         System.out.println("Valor em octal: " + Integer.toOctalString(numero));
         System.out.println("Valor em hexadecimal: " + Integer.toHexString(numero));
+        System.out.println("Valor em binário: "+Integer.toBinaryString(numero));
         
         scanner.close();
     }
