@@ -1,6 +1,6 @@
 public class C1_4Teste {
    public static void main(String[] args) {
-       int a = 10;
+       int a = 30;
       
        if (a == 10) {
            // SE for verdadeiro
