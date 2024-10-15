@@ -1,7 +1,7 @@
 public class E4OperadoresLogicos {
     public static void main(String[] args) {
-        boolean a = false;
-        boolean b = true;
+        boolean a = true;
+        boolean b = false;
         
         if (a && b) {
             System.out.println("Linha 1 É MENTIRA");
