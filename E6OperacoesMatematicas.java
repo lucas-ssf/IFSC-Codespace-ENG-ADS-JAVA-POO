@@ -13,7 +13,7 @@ public class E6OperacoesMatematicas {
         System.out.println("Base elevada ao expoente: " + Math.pow(base, expoente));
         System.out.println("Seno de 45 graus: " + Math.sin(Math.toRadians(45)));
         System.out.println("Raiz quadrada de 2: " + Math.sqrt(2));
-        System.out.println("Log natural de 10: " + Math.log(10));
+        System.out.println("Log natural de e: " + Math.log(Math.exp(1)));
         System.out.println("Log base 10 de 100: " + Math.log10(100));
         System.out.println("Arredondamento para cima de 3.1: " + Math.ceil(3.1));
         System.out.println("Parte inteira de 3.9: " + Math.floor(3.9));
