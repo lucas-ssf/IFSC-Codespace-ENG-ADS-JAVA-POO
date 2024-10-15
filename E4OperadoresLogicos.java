@@ -4,13 +4,13 @@ public class E4OperadoresLogicos {
         boolean b = true;
         
         if (a && b) {
-            System.out.println("Linha 1 VERDADE");
+            System.out.println("Linha 1 É MENTIRA");
         }
         if (a || b) {
             System.out.println("Linha 2 - VERDADE");
         }
         if (!(a && b)) {
-            System.out.println("Linha 3 VERDADE");
+            System.out.println("Linha 3 VERDADE NÃO MINTO");
         }
     }
 }
