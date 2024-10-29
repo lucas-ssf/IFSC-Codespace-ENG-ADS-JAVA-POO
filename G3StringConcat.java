@@ -9,7 +9,7 @@ public class G3StringConcat {
         System.out.println("str1 = " + str1);
         
         // Se quiser adicionar "Java" também:
-        str1 = str1.concat(str3);
+        str1 = str1 + str3;
         System.out.println("str1 completa = " + str1);
     }
 }
