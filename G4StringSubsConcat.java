@@ -1,8 +1,9 @@
 public class G4StringSubsConcat {
     public static void main(String[] args) {
-        String str1 = "Curso";
-        String str2 = " de programacao Java";
-        str1 = str1.concat(str2.substring(0, 15));
-        System.out.println("str1 = " + str1);
+        Scanner entrada = new Scanner(System.in);
+        String barra = "-".repeat(10);
+        System.out.println(barra);
+        System.out.printf("Digite algo: ");
+
     }
 }
