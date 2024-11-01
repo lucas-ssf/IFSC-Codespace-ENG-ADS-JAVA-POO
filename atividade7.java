@@ -1,10 +1,21 @@
+/*
+ * Explicação da atividade:
+ * No início e no fim do programa é utilizado o método repeat(), que consiste na repetição da string original n vezes
+ * Em seguida, o método trim() remove os espaços em branco do início e do fim da string
+ * O método length() verifica o tamanho da string
+ * Logo abaixo, os métodos toUpperCase() e toLowerCase() transformam toda string em letras maiúsculas ou minúsculas
+ * O método endsWith() é utilizado algumas vezes, e verifica se o final da string corresponde ao valor informado
+ * Por fim, o método substring() retorna uma parte da string de acordo com o índice inicial e o final
+ */
+
+
 import java.util.Scanner;
 
 
 public class atividade7 {
     public static void main(String[] args) {
         Scanner entrada = new Scanner(System.in);
-        String barra = "-".repeat(30);
+        String barra = "-".repeat(70);
         System.out.println(barra);
         System.out.printf("Digite algo: ");
         String algo = entrada.nextLine();
@@ -28,5 +39,6 @@ public class atividade7 {
             System.out.printf("SUA ENTRADA NO AUMENTATIVO: %s\n",algao);
             
         }
+        System.out.println(barra);
     }
 }
