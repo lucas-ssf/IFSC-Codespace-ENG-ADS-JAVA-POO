@@ -1,6 +1,42 @@
+/*
+ * Parte 4: Pesquise sobre Metodos estaticos e metodos de instancia (atrelado a um objeto)
+ *
+ ********************* 
+ * Metodos estaticos * 
+ ********************* 
+ * Sao aqueles que podem ser acessados independentemente de um objeto
+ * No codigo abaixo, por exemplo, multiplicar e absoluto fazem parte dessa classificacao 
+ *
+ ************************ 
+ * Metodos de instancia *
+ ************************ 
+ * Sao aqueles que dependem de um objeto para serem acessados
+ * No codigo abaixo, o metodo 'converter...' e instanciado, por isso precisa ser acessado por meio de um objeto 
+ *
+ */
+
+/*
+ * Parte 5: Pesquisa sobre Metodos public, private e protected
+ *
+ **********
+ * public * pode ser acessado por quaisquer outras classes, irrestritamente
+ **********
+ *
+ ***********
+ * private * seu uso esta restrito somente para a classe em que foi declarado, ou seja, as demais classes nao podem utilizar esses metodos
+ *********** 
+ *
+ *************
+ * protected * esse tipo de metodo e mais restrito que o 'public' mas mais permissivo que 'private', podendo ser acessado dentro da mesma classe, dentro do mesmo pacote e dentro de outras subclasses
+ *************
+ *
+ */
+import CalculadoraSoma.all;
+
 public class desafio2{
-    public static double converterCelsiusParaFahrenheit(double celsius) {
-        return (celsius * 9/5) + 32;
+    double temperatura;
+    public void converterCelsiusParaFahrenheit(double celsius) {
+        temperatura = (celsius * 9/5) + 32;
     }
     public static int multiplicar(int a, int b) {
         return a * b;
@@ -25,8 +61,14 @@ public class desafio2{
         return x;
     }   
     public static void main(String[] args){
-        System.out.println("Convertendo 30ºC para F: "+converterCelsiusParaFahrenheit(30));
+        desafio2 objeto = new desafio2();
+        objeto.converterCelsiusParaFahrenheit(30);
+
+        CalculadoraSoma calc = new CalculadoraSoma();
+
+        System.out.println("Convertendo 30ºC para F: "+objeto.temperatura);
         System.out.println("5 x 6 = "+multiplicar(5,6));
+        System.out.println("2 + 2 = "+calc.somar(2,2));
         System.out.println("3.14159265358979 x 6 = "+multiplicar(3.14159265358979,6));
         System.out.println("Raiz quadrada de 2: "+raizQuadrada(2));
         System.out.println("|-2| = "+absoluto(-2));
