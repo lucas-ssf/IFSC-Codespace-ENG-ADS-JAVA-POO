@@ -31,8 +31,6 @@
  *************
  *
  */
-import CalculadoraSoma.all;
-
 public class desafio2{
     double temperatura;
     public void converterCelsiusParaFahrenheit(double celsius) {
