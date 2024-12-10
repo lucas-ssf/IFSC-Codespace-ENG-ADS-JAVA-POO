@@ -1,10 +1,30 @@
+import java.util.ArrayList;
+
+public class Main{
+    public static void main(String[] args){
+    	ArrayList<Carro> lista = new ArrayList<>();
+	lista.add(new Carro("Fusca", 1977));	
+	lista.add(new SUV("EcoSport", 2012, false));	
+	lista.add(new Sedan("Corsa", 2009, true));
+
+	for(int i = 0; i < 3; i++)lista.get(i).exibirDetalhes();	
+    }
+}
 class Carro{
     private String modelo;
     private int ano;
 
     Carro(String modelo, int ano){
-        this.modelo = modelo;
+    	this.modelo = modelo;
         this.ano = ano;
+    }
+
+    public String getModelo(){
+        return modelo;	
+    }
+
+    public int getAno(){
+        return ano;	
     }
 
     void exibirDetalhes(){
@@ -22,7 +42,7 @@ class SUV extends Carro{
 
     @Override
     void exibirDetalhes(){
-        System.out.printf("Modelo: %s\nAno: %d\nMotor Turbo: %b",modelo, ano, motorTurbo);
+        System.out.printf("Modelo: %s\nAno: %d\nMotor Turbo: %b\n",getModelo(), getAno(), motorTurbo);
     }
 }
 
@@ -34,12 +54,8 @@ class Sedan extends Carro{
     }
     @Override
     void exibirDetalhes(){
-        System.out.printf("Modelo: %s\nAno: %d\nMotor Turbo: %b",modelo, ano, motorHibrido);
+        System.out.printf("Modelo: %s\nAno: %d\nMotor Turbo: %b\n",getModelo(), getAno(), motorHibrido);
     }
 }
 
-public class Main{
-    public static void main(String[] args){
 
-    }
-}
